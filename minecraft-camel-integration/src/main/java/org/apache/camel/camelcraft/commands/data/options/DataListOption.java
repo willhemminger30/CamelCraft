@@ -48,9 +48,12 @@ public class DataListOption extends Option {
                 }
                 System.out.println(output);
                 RobotHelper.typeString(output.toString());
+            } else {
+                RobotHelper.typeString("No data entries found.");
             }
 
         } catch (FileNotFoundException e) {
+            RobotHelper.typeString("No player data file found!");
             System.out.println("File " + filename + " not found!");
         }
     }

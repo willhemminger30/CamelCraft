@@ -41,11 +41,16 @@ public class DataGetOption extends Option {
                 if(!entryString.isEmpty()) {
                     System.out.println(entryString);
                     RobotHelper.typeString(entryString);
+                } else {
+                    RobotHelper.typeString("No data found for entry with tag " + tag + ".");
                 }
 
             } catch (FileNotFoundException e) {
+                RobotHelper.typeString("No player data file found!");
                 System.out.println("File " + filename + " not found!");
             }
+        } else {
+            RobotHelper.typeString("Invalid entry tag.");
         }
     }
 }

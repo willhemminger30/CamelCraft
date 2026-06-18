@@ -40,6 +40,7 @@ public class DataStoreOption extends Option {
 
                 RobotHelper.typeString("Data stored in entry: " + tag);
             } catch (IOException e) {
+                RobotHelper.typeString("Failed to store data in entry: " + tag);
                 System.out.println("Failure to write to file.");
                 e.printStackTrace();
             }
