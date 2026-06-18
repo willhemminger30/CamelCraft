@@ -1,0 +1,16 @@
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/MainApp.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/Command.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/CommandLoader.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/Option.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/data/DataCommand.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/data/DataEntry.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/data/options/DataDeleteOption.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/data/options/DataGetOption.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/data/options/DataListOption.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/data/options/DataStoreOption.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/help/HelpCommand.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/commands/shutdown/ShutdownCommand.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/processors/LogProcessor.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/routes/LogStreamRouteBuilder.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/util/Properties.java
+/home/william/Desktop/Java/CamelCraft/minecraft-camel-integration/src/main/java/org/apache/camel/camelcraft/util/RobotHelper.java
