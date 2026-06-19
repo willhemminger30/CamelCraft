@@ -28,7 +28,6 @@ public class Properties {
             }
         } catch (FileNotFoundException e) {
             System.err.println("Properties file not found.");
-            System.exit(1);
         }
     }
     public static String username;
