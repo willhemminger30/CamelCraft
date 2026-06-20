@@ -1,6 +1,6 @@
 package org.apache.camel.camelcraft.commands.data.options;
 
-import org.apache.camel.camelcraft.util.Properties;
+import static org.apache.camel.camelcraft.util.Properties.*;
 import org.apache.camel.camelcraft.commands.Option;
 import org.apache.camel.camelcraft.util.RobotHelper;
 
@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class DataStoreOption extends Option {
     public DataStoreOption() {
-        keyword = Properties.STORE;
+        keyword = STORE;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class DataStoreOption extends Option {
     }
 
     private void storeText(String text) {
-        File dir = new File(Properties.PLAYERDATA);
+        File dir = new File(PLAYERDATA);
         Pattern pattern = Pattern.compile("(.+?) (.+)");
         Matcher matcher = pattern.matcher(text);
         String tag;
@@ -35,7 +35,7 @@ public class DataStoreOption extends Option {
                 }
             }
 
-            try(FileWriter writer = new FileWriter(dir.getPath() + "/" + Properties.username + ".txt", true)) {
+            try(FileWriter writer = new FileWriter(dir.getPath() + "/" + USERNAME + ".txt", true)) {
                 writer.write(tag + "," + body + "\n");
 
                 RobotHelper.typeString("Data stored in entry: " + tag);

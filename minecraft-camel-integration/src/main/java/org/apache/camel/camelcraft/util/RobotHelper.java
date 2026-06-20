@@ -1,5 +1,4 @@
 package org.apache.camel.camelcraft.util;
-
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -7,7 +6,7 @@ import java.awt.event.KeyEvent;
 
 public class RobotHelper {
     public static void typeString (String str) {
-        str = "/w " + Properties.username + " " + str;
+        str = "/w " + Properties.USERNAME + " " + str;
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(new StringSelection(str), null);
 

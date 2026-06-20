@@ -4,7 +4,6 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.camelcraft.commands.Command;
 import org.apache.camel.camelcraft.commands.CommandLoader;
-
 import static org.apache.camel.camelcraft.util.Properties.*;
 
 import java.time.LocalDateTime;
@@ -22,21 +21,20 @@ public class LogProcessor implements Processor {
     public void process(Exchange exchange) throws Exception {
         String logMessage = exchange.getMessage().getBody(String.class);
 
-        if(logMessage.matches(".+\\[CHAT] You whisper to " + username + ": " + prefix + ".+")) {
-
+        if(logMessage.matches(".+\\[CHAT] You whisper to " + USERNAME + ": " + PREFIX  + ".+")) {
             activateSystem(logMessage);
 
             if(!isActive) {
                 return;
             }
 
-            String fullCommand = logMessage.substring(logMessage.indexOf(prefix) + prefix.length() + 1);
+            String fullCommand = logMessage.substring(logMessage.indexOf(PREFIX) + PREFIX.length() + 1);
             String command = fullCommand.split(" ")[0];
             String options = fullCommand.substring(fullCommand.indexOf(command) + command.length()).trim();
 
             for(Command c : CommandLoader.getCommands()) {
                 if(c.getKeyword().equals(command)) {
-                    System.out.print("USER: " + username + " - ");
+                    System.out.print("USER: " + USERNAME + " - ");
                     c.doOptions(options, exchange);
                 }
             }

@@ -1,12 +1,12 @@
 package org.apache.camel.camelcraft.commands.shutdown;
 
 import org.apache.camel.Exchange;
-import org.apache.camel.camelcraft.util.Properties;
+import static org.apache.camel.camelcraft.util.Properties.*;
 import org.apache.camel.camelcraft.commands.Command;
 
 public class ShutdownCommand extends Command {
     public ShutdownCommand() {
-        keyword = Properties.SHUTDOWN;
+        keyword = SHUTDOWN;
     }
 
     @Override

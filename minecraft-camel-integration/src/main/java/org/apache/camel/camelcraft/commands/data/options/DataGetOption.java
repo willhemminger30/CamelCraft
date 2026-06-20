@@ -1,6 +1,6 @@
 package org.apache.camel.camelcraft.commands.data.options;
 
-import org.apache.camel.camelcraft.util.Properties;
+import static org.apache.camel.camelcraft.util.Properties.*;
 import org.apache.camel.camelcraft.commands.Option;
 import org.apache.camel.camelcraft.util.RobotHelper;
 
@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 public class DataGetOption extends Option {
     public DataGetOption() {
-        keyword = Properties.GET;
+        keyword = GET;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class DataGetOption extends Option {
     }
 
     private void getData(String tag) {
-        String filename = Properties.PLAYERDATA + "/" + Properties.username + ".txt";
+        String filename = PLAYERDATA + "/" + USERNAME + ".txt";
         String entryString = "";
         Pattern pattern = Pattern.compile("(.+?),(.+)");
         Matcher matcher;

@@ -1,37 +1,14 @@
 package org.apache.camel.camelcraft.util;
 
+import org.apache.camel.CamelContext;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Properties {
-    static {
-        try(Scanner reader = new Scanner(new File("Properties.txt"))) {
-            StringBuilder fileContents = new StringBuilder();
-            while(reader.hasNext()) {
-                fileContents.append(reader.nextLine() + ",");
-            }
-
-            if(!fileContents.isEmpty()) {
-                String[] properties = fileContents.toString().split(",");
-                for(String property : properties) {
-                    String[] keyvalues = property.split("=");
-                    if(keyvalues.length > 1) {
-                        switch(keyvalues[0]) {
-                            case "username" -> username = keyvalues[1];
-                            case "prefix" -> prefix = keyvalues[1];
-                            case "test" -> System.out.println("This is a test");
-                            default -> System.out.println("Property not recognized: " + keyvalues[0]);
-                        }
-                    }
-                }
-            }
-        } catch (FileNotFoundException e) {
-            System.err.println("Properties file not found.");
-        }
-    }
-    public static String username;
-    public static String prefix;
+    public static String USERNAME = null;
+    public static String PREFIX = null;
 
     // CONSTANTS
     public static final String PLAYERDATA = "PlayerData";
@@ -47,4 +24,9 @@ public class Properties {
     public static final String SHUTDOWN = "shutdown";
     // COMMAND
     public static final String HELP = "help";
+
+    public static void initProperties(CamelContext camelContext) {
+        USERNAME = camelContext.resolvePropertyPlaceholders("{{username}}");
+        PREFIX = camelContext.resolvePropertyPlaceholders("{{prefix}}");
+    }
 }

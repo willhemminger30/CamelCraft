@@ -1,7 +1,7 @@
 package org.apache.camel.camelcraft.commands.data.options;
 
 import org.apache.camel.camelcraft.commands.Option;
-import org.apache.camel.camelcraft.util.Properties;
+import static org.apache.camel.camelcraft.util.Properties.*;
 import org.apache.camel.camelcraft.util.RobotHelper;
 
 import java.io.File;
@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 
 public class DataDeleteOption extends Option {
     public DataDeleteOption() {
-        keyword = Properties.DELETE;
+        keyword = DELETE;
     }
 
     public void doAction(String actions) {
@@ -25,7 +25,7 @@ public class DataDeleteOption extends Option {
     private void deleteEntry(String tag) {
         HashMap<String, String> entries = new HashMap<>();
 
-        String filename = Properties.PLAYERDATA + "/" + Properties.username + ".txt";
+        String filename = PLAYERDATA + "/" + USERNAME + ".txt";
         String entryString = "";
         Pattern pattern = Pattern.compile("(.+?),(.+)");
         Matcher matcher;

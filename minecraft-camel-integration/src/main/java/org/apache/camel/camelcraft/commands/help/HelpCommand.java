@@ -4,12 +4,12 @@ import org.apache.camel.Exchange;
 import org.apache.camel.camelcraft.commands.Command;
 import org.apache.camel.camelcraft.commands.CommandLoader;
 import org.apache.camel.camelcraft.commands.Option;
-import org.apache.camel.camelcraft.util.Properties;
+import static org.apache.camel.camelcraft.util.Properties.*;
 import org.apache.camel.camelcraft.util.RobotHelper;
 
 public class HelpCommand extends Command {
     public HelpCommand() {
-        keyword = Properties.HELP;
+        keyword = HELP;
     }
 
     @Override

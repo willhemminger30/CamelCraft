@@ -1,6 +1,6 @@
 package org.apache.camel.camelcraft.commands.data.options;
 
-import org.apache.camel.camelcraft.util.Properties;
+import static org.apache.camel.camelcraft.util.Properties.*;
 import org.apache.camel.camelcraft.commands.Option;
 import org.apache.camel.camelcraft.util.RobotHelper;
 
@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 public class DataListOption extends Option {
     public DataListOption() {
-        keyword = Properties.LIST;
+        keyword = LIST;
     }
 
     @Override
@@ -21,12 +21,12 @@ public class DataListOption extends Option {
     }
 
     private void listData() {
-        String filename = Properties.PLAYERDATA + "/" + Properties.username + ".txt";
+        String filename = PLAYERDATA + "/" + USERNAME + ".txt";
         String entryString = "";
         Pattern pattern = Pattern.compile("(.+?),(.+)");
         Matcher matcher;
         StringBuilder output = new StringBuilder();
-        HashSet<String> entrySet = new HashSet<>();
+        LinkedHashSet<String> entrySet = new LinkedHashSet<>();
 
         try(Scanner reader = new Scanner(new File(filename))) {
             while(reader.hasNext()) {
