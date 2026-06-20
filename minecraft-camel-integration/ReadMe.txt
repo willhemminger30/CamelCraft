@@ -28,8 +28,10 @@ Ensure that you have an application.properties file in the same directory as the
 The application.properties file needs the following info:
 username
 prefix
+logfile
 
 The username is your Mineecraft username, whereas the prefix is the key combination that will be
-used from the chat to trigger the Apache Camel route.  The repo has example values.
+used from the chat to trigger the Apache Camel route.  The logfile is the location where the application
+should look for Minecraft's latest log file.  The repo has example values.
 
 
