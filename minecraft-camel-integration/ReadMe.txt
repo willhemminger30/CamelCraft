@@ -16,3 +16,20 @@ You can run this example using
 === More information
 
 You can find more information about Apache Camel at the website: http://camel.apache.org/
+
+***ADDITIONAL INFO***
+You can generate jar with dependencies using:
+mvn package
+
+You can run the jar using:
+java -jar <jarname>
+
+Ensure that you have an application.properties file in the same directory as the jar
+The application.properties file needs the following info:
+username
+prefix
+
+The username is your Mineecraft username, whereas the prefix is the key combination that will be
+used from the chat to trigger the Apache Camel route.  The repo has example values.
+
+
