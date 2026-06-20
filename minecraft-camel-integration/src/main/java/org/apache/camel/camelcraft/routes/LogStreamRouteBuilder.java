@@ -12,7 +12,7 @@ public class LogStreamRouteBuilder extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("stream:file?fileName=/home/william/.minecraft/logs/latest.log&scanStream=true&scanStreamDelay=500")
+        from( "stream:file?fileName={{logfile}}&scanStream=true&scanStreamDelay=500")
                 .process(logProcessor);
     }
 }
