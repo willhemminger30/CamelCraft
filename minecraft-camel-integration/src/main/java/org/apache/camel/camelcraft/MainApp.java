@@ -1,12 +1,10 @@
 package org.apache.camel.camelcraft;
 
-import org.apache.camel.CamelContext;
 import org.apache.camel.camelcraft.routes.LogStreamRouteBuilder;
 import static org.apache.camel.camelcraft.util.Properties.*;
 import org.apache.camel.component.properties.PropertiesComponent;
 import org.apache.camel.main.BaseMainSupport;
 import org.apache.camel.main.Main;
-import org.apache.camel.main.MainListener;
 import org.apache.camel.main.MainListenerSupport;
 
 /**
