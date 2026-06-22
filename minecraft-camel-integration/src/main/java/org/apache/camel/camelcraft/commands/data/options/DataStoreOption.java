@@ -2,6 +2,7 @@ package org.apache.camel.camelcraft.commands.data.options;
 
 import static org.apache.camel.camelcraft.util.Properties.*;
 import org.apache.camel.camelcraft.commands.Option;
+import org.apache.camel.camelcraft.util.DataHelper;
 import org.apache.camel.camelcraft.util.RobotHelper;
 
 import java.io.*;
@@ -15,35 +16,10 @@ public class DataStoreOption extends Option {
 
     @Override
     public void doAction(String actions) {
-        storeText(actions);
+        storeData(actions);
     }
 
-    private void storeText(String text) {
-        File dir = new File(PLAYERDATA);
-        Pattern pattern = Pattern.compile("(.+?) (.+)");
-        Matcher matcher = pattern.matcher(text);
-        String tag;
-        String body;
-
-        if(matcher.matches()) {
-            tag = matcher.group(1);
-            body = matcher.group(2);
-
-            if(!dir.exists()) {
-                if(!dir.mkdir()) {
-                    System.out.println("Failed to create directory.");
-                }
-            }
-
-            try(FileWriter writer = new FileWriter(dir.getPath() + "/" + USERNAME + ".txt", true)) {
-                writer.write(tag + "," + body + "\n");
-
-                RobotHelper.typeString("Data stored in entry: " + tag);
-            } catch (IOException e) {
-                RobotHelper.typeString("Failed to store data in entry: " + tag);
-                System.out.println("Failure to write to file.");
-                e.printStackTrace();
-            }
-        }
+    void storeData(String text) {
+        DataHelper.storeData(text);
     }
 }

@@ -18,6 +18,7 @@ public class Properties {
     //  OPTIONS
     public static final String STORE = "store";
     public static final String GET = "get";
+    public static final String APPEND = "append";
     public static final String LIST = "list";
     public static final String DELETE = "delete";
     // COMMAND
